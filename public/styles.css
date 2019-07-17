@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100vh; 
+}
+
+.container {
+    max-width: 580px;
+    height: 580px;
+    padding: 15px 30px;
+    box-shadow: inset 0px 0px 0px 3px #cccccc;
+}
