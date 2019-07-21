@@ -5,14 +5,128 @@
 }
 
 body {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 100vh; 
+    font-family: -apple-system,
+        BlinkMacSystemFont,
+        avenir next, avenir,
+        helvetica, helvetica neue,
+        ubuntu, roboto, noto, segoe ui,
+        arial, sans-serif;
+    animation: rainbow 5s ease-in;
+    animation-iteration-count: infinite;
 }
 
 .container {
-    max-width: 580px;
-    height: 580px;
-    padding: 15px 30px;
+    display: grid;
+    background-color: #ffffff;
+    grid-template-columns: 100%;
+    grid-template-rows: 12% auto 70px;
+    position: relative;
+    max-width: 680px;
+    margin: 20px auto;
+    height: calc(100vh - 40px);
+    padding: 30px;
     box-shadow: inset 0px 0px 0px 3px #cccccc;
 }
+
+.heading {
+    color: rgba(0, 0, 0, .85);
+}
+
+.sub-heading {
+    line-height: 32px;
+    color: rgba(0, 0, 0, .7);
+}
+
+.chat-container {
+    background-color: rgba(0, 0, 0, .1);
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.chat-text {
+    margin-bottom: 14px;
+    color: rgba(0, 0, 0, .7);
+}
+
+.chat-text .sender {
+    padding: 4px 8px;
+    color: #ffffff; 
+    background: rgb(42, 152, 255);
+    font-weight: bold;
+}
+
+.chat-form {
+    padding-top: 15px;
+}
+
+.chat-form form {
+    display: flex;
+    height: 70%;
+    align-items: stretch;
+}
+
+.chat-form form input[name="message"] {
+    flex-grow: 2;
+    margin: 0 15px;
+}
+
+.chat-form form button {
+    margin: 0 0 0 auto;
+    border: none;
+    background: rgb(42, 152, 255);
+    color: #ffffff;
+    outline: none;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.chat-form form button:hover,
+.chat-form form button:focus {
+    background: rgb(32, 116, 194);
+}
+
+.chat-form form input {
+    border: none;
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, .4);
+    outline: none;
+}
+
+.chat-form form input:focus {
+    box-shadow: 0px 2px 0px rgb(42, 152, 255);
+}
+
+
+/* START ANIMATIONS */
+@keyframes rainbow {
+
+    0%,
+    100% {
+        background: #40a9ff;
+    }
+
+    50% {
+        background: #7940ff;
+    }
+}
+
+/* END ANIMATIONS */
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(42, 152, 255);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(120, 180, 236);
+}
+
+/* END SCROL BAR STYLING */
